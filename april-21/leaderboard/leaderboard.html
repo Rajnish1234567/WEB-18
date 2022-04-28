@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width:50%;
+            margin:auto;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #container>div>div {
+            border:1px solid black;
+            font-size: 25px;
+            margin-bottom: 20px;
+            width:100px;
+            height:80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #min {
+            background-color: red;
+        }
+        #max {
+            background-color: green;
+        }
+        h2 {
+            text-align:center;
+        }
+        #keys {
+            width:40%;
+            margin:auto;
+            display:grid ;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows:repeat(4,50px);
+            gap:30px;
+            margin-bottom: 30px;
+        }
+        #display {
+            width:40%;
+            height:100px;
+            margin:auto;
+            color: black;
+            background-color: gray;
+            font-size: 40px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #keys>button {
+            border:1px solid red;
+            display:flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        #enter {
+            display: block;
+            margin:auto;
+            font-size: 20px;
+            padding:20px 55px 20px 55px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <div id="min">500</div>
+            <h2>MIN</h2>
+        </div>
+        <div>
+            <div id="max">7668</div>
+            <H2>MAX</H2>
+        </div>
+    </div>
+    <div id="display">#</div>
+    <div id="keys">
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+        <button id="btn4">4</button>
+        <button id="btn5">5</button>
+        <button id="btn6">6</button>
+        <button id="btn7">7</button>
+        <button id="btn8">8</button>
+        <button id="btn9">9</button>
+        <button id="btn0">0</button>
+    </div>
+    <button id="enter">ENTER</button>
+</body>
+</html>
+<script>
+        var key=document.querySelectorAll("#keys");
+        var bag="";
+        for(var i=0; i<key.length; i++)
+        {
+            var targetNumber=key[i].addEventListener("click", myfun)
+        }
+        function myfun (){
+           var input= event.target.innerText;
+            bag+=input;
+           document.querySelector("#display").innerText=bag;
+        }
+
+        document.querySelector("#enter").addEventListener("click", finalfun)
+        function finalfun() {
+            var min=document.querySelector("#min").innerText;
+            var max=document.querySelector("#max").innerText;
+            if(bag<document.querySelector("#min").innerText)
+            {
+                document.querySelector("#min").innerText=bag;
+                bag="";
+            }
+            else if(bag>document.querySelector("#max").innerText)
+            {
+                document.querySelector("#max").innerText=bag;
+                bag="";
+            }
+        }
+</script>

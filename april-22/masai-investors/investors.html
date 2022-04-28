@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        #container {
+            margin-top: 10px;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+        }
+        p+img {
+            width:50%;
+            margin:auto;
+        }
+        * {
+            text-align: center;
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var investorsData=[
+        {avtar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"Vijay Shekhar Sharma",
+        post:"Founder & CEO",
+        company: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+
+        {avtar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"Vijay Shekhar Sharma",
+        post:"Founder & CEO",
+        company: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+
+        {avtar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"Vijay Shekhar Sharma",
+        post:"Founder & CEO",
+        company: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+
+        {avtar:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"Vijay Shekhar Sharma",
+        post:"Founder & CEO",
+        company: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"}    
+        ]
+
+        investorsData.forEach(function(ele){
+            var box=document.createElement("div");
+            var img=document.createElement("img");
+            img.setAttribute("src",ele.avtar)
+            var name=document.createElement("h3");
+            name.innerText=ele.name;
+            var role=document.createElement("p");
+            role.innerText=ele.post;
+            var company=document.createElement("img");
+            company.setAttribute("src",ele.company);
+            
+            box.append(img,name,role,company);
+            document.querySelector("#container").append(box);
+        })
+</script>

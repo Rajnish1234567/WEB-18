@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid-2</title>
+    <style>
+        #container {
+            width:80%;
+            margin:auto;
+            padding:20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 120px 120px 15px;
+            gap:20px;
+            grid-template-areas: 
+            "a a b e"
+            "c d b e"
+            ". . . e";
+        }
+        #container>div:first-child {
+            background-color: gray;
+            border-radius: 8px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 20px;
+            grid-area: a;
+            color: white;
+        }
+        #container>div:nth-child(2) {
+            background-color: gray;
+            border-radius: 8px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 20px;
+            color: white;
+            grid-area: b;
+        }
+        #container>div:nth-child(3) {
+            background-color: gray;
+            border-radius: 8px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 20px;
+            color: white;
+            grid-area: c;
+        }
+        #container>div:nth-child(4) {
+            background-color: gray;
+            border-radius: 8px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 20px;
+            color: white;
+            grid-area: d;
+        }
+        #container>div:nth-child(5) {
+            background-color: gray;
+            border-radius: 8px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 20px;
+            color: white;
+            grid-area: e;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+</body>
+</html>

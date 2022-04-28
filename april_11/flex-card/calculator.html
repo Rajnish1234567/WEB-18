@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       body>h1 {
+           text-align: center;
+           color: rgb(44, 173, 173);
+       }
+       body>div {
+           padding-top: 30px;
+           width: 40%;
+           height: 330px;
+           margin: auto;
+        box-shadow: 2px 5px 10px 0px grey;
+        margin-top: 30px;
+       }
+       .display {
+           width:75%;
+           height:50px;
+           border-radius: 5px;
+           margin: auto;
+           border: 1px solid rgb(206, 205, 205);
+           margin-bottom:15px;
+       }
+       body>div>div {
+          
+           width:75%;
+           height:50px;
+           border-radius: 5px;
+           margin: auto;
+           margin-bottom:10px;
+           
+           display: flex;
+       }
+        div>div>div {
+           width:22%;
+           height:50px;
+           border-radius: 5px;
+           font-size: 20px;
+           font-weight: 400;
+           line-height: 50px;
+           text-align: center;
+           margin: auto;
+           margin-bottom:10px;
+           box-shadow: .5px .5px 5px 0px rgb(182, 177, 177);
+       }
+       div>div>div:nth-child(4) {
+        background-color:black;
+        color:white;
+       }
+       div>div:nth-last-child(1)>div:nth-child(1) {
+           background-color: red;
+           color:white;
+       }
+       div>div:nth-last-child(1)>div:nth-child(3) {
+           background-color: black;
+           color:white;
+       }
+   </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div>
+        <div class="display"></div>
+        <div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+        </div>
+        <div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+        </div>
+        <div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>*</div>
+        </div>
+        <div>
+            <div>C</div>
+            <div>0</div>
+            <div>=</div>
+            <div>/</div>
+        </div>
+    </div>
+</body>
+</html>

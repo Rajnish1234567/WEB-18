@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Display Flex</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+        }
+
+        .container {
+            display: flex;
+            border: 1px solid green;
+            width: 90%;
+            margin: auto;
+            flex-direction: row;
+           
+        }
+
+        .box {
+            width: 20%;
+            background-color: black;
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            border: 1px solid red;
+            padding: 2% 0px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #order1 {
+            /* order: 10; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Display Flex</h1>
+    <div class="container">
+        <div style="order: 5;" class="box"> Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div id="order1" class="box">Box 4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(6, 6, 61);
+            font-size: 40px;
+            margin-bottom: 20px;
+            width:40%;
+            margin: auto;
+        }
+        h1+p {
+            text-align: center;
+            color: gray;
+            width:40%;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        #container {
+            display: grid;
+            width:70%;
+            margin:auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1,auto);
+            /* grid-template-areas: "b1 b2 b3"; */
+            gap:20px;
+        }
+        h3 {
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 0%;
+        }
+        h5{
+            text-align: center;
+            margin-top: 0%;
+            font-style: italic;
+            color: gray;
+        }
+        h5+p {
+            text-align: center;
+            text-align: center;
+            color: gray;
+            text-align: center;
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding: 10px;
+            padding-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+            color: blue;
+            border-radius: 5px;
+            border: 1px solid blue;
+            width:80%;
+            border-radius: 10px;
+        }
+        .class1 {
+            /* grid-area: b1; */
+            width:90%;
+            box-shadow: 1px 3px 5px 4px gray;
+            border-radius: 10px;
+        }
+        .class2 {
+            /* grid-area: b2; */
+            width:90%;
+            box-shadow: 1px 3px 5px 4px gray;
+            border-radius: 10px;
+        }
+        .class3 {
+            /* grid-area: b3; */
+            width:90%;
+            box-shadow: 1px 3px 5px 4px gray;
+            border-radius: 10px;
+        }
+        .class1 h2 {
+            color: green;
+        }
+        .class2 h2 {
+            color:pink;
+        }
+        .class3 h3 {
+            color: rgb(70, 73, 235);
+        }
+        .class2 button {
+            background-color: rgb(70, 73, 235);
+            color: white;
+        }
+        @media all and (min-width:550px) and (max-width:850px){
+            #container {
+            width:70%;
+            margin:auto;
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media all and (min-width:200px) and (max-width:550px){
+            #container {
+
+            width:70%;
+            margin:auto;
+            grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Choose a plan that right for your business</h1>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+    <div id="container">
+        <div class="class1">
+            <h3>Starter Plan</h3>
+            <h2>Free</h2>
+            <h5>per month</h5>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div class="class2">
+            <h3>Business Plan</h3>
+            <h2>$39.00</h2>
+            <h5>per month</h5>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+        <div class="class3">
+            <h3>Premium Plan</h3>
+            <h2>$59.00</h2>
+            <h5>per month</h5>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+            <button>Start Now</button>
+        </div>
+    </div>
+</html>

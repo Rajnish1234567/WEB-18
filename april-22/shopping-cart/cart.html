@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+        p+div {
+            display:flex;
+            margin:20px;
+            margin-top: 0%;
+            padding-left: 30px;
+            gap:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    var data = [ 
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+data.forEach(function(elem){
+    var box=document.createElement("div");
+    var avtar=document.createElement("img");
+    avtar.setAttribute("src",elem.imgUrl);
+    var name=document.createElement("p");
+    name.innerText=elem.name;
+    var box1=document.createElement("div");
+    var price=document.createElement("h4");
+    price.innerText=elem.price;
+    var offPrice=document.createElement("h6");
+    offPrice.innerText=elem.strikedOffPrice;
+    var btn=document.createElement("button");
+    btn.innerText="Delete";
+    btn.addEventListener("click", deleteRow);
+    box1.append(price,offPrice)
+    box.append(avtar,name,box1,btn);
+    document.querySelector("#container").append(box);
+})
+function deleteRow(){
+    event.target.parentNode.remove();
+}
+
+</script>

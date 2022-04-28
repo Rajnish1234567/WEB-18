@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 90%;
+            margin: auto;
+            background-color: skyblue;
+            margin-top: 10px;
+            padding: 2%;
+        }
+
+        .box {
+            height: 100px;
+            width: 90%;
+            font-size: 20px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .pink {
+            background-color: hotpink;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    </style>
+    <style>
+        .green {
+            position: sticky;
+            top: 10px;
+
+        }
+
+        .orange {}
+
+        .pink {}
+
+        .parent {
+            height: 200vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Parent</h1>
+        <div class="green box">One</div>
+        <div class="orange box">Two</div>
+        <div class="pink box">Three</div>
+    </div>
+</body>
+
+</html>

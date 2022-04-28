@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid-1</title>
+    <style>
+        #container {
+            width:70%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 120px);
+            gap:20px;
+            grid-template-areas: "a a b b"
+                                 "c d d d"
+                                 "e e e e";
+        }
+        #container>div:first-child {
+            background-color:gray;
+            grid-area: a;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 15px;
+            border-radius: 7px;
+        }
+        #container>div:nth-child(2) {
+            background-color:gray;
+            grid-area: b;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 15px;
+            border-radius: 7px;
+        }
+        #container>div:nth-child(3) {
+            background-color:gray;
+            grid-area: c;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 15px;
+            border-radius: 7px;
+        }
+        #container>div:nth-child(4) {
+            background-color:gray;
+            grid-area: d;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 15px;
+            border-radius: 7px;
+        }
+        #container>div:nth-child(5) {
+            background-color:gray;
+            grid-area: e;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 40px;
+            padding-left: 15px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+</body>
+</html>

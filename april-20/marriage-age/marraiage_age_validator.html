@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="gender">
+		<option value="">Gender</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+    <p>yearOfBirth <input id="year" type="number"></p>
+    <p id="result">Here is result</p>
+    <button onClick="checkAge ()">check</button>
+</body>
+</html>
+<script>
+function checkAge () {
+var age=2022- document.getElementById("year").value
+var gender=document.getElementById("gender").value
+if(age>21 && gender==="male")
+{
+    document.getElementById("result").innerText="Legal age to get married|"
+}
+else if(age>18 && gender==="female")
+{
+    document.getElementById("result").innerText="Legal age to get married!"
+}
+else{
+    document.getElementById("result").innerText="Not legal age to get married!"
+}
+}
+</script>

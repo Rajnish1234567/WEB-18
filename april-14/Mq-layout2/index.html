@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #container {
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 50px 200px;
+            row-gap: 15px;
+            column-gap: 25px;
+            grid-template-areas: "nav nav"
+                                 "l1 r1";
+        }
+        #container>div:first-child {
+            grid-area: nav;
+            background-color: yellow;
+            font-size: 30px;
+            color: gray;
+        }
+        #container>div:last-child {
+            grid-area: r1;
+            font-size: 20px;
+            background-color: red;
+            color: gray;
+        }
+        #container>div:nth-child(2) {
+            grid-area: l1;
+            font-size: 20px;
+            background-color: rgb(31, 163, 42);
+            color: gray;
+        }
+        @media all and (min-width:450px) and (max-width:750px)  {
+            #container {
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 50px 150px 150px;
+            row-gap: 15px;
+            column-gap: 25px;
+            grid-template-areas: "nav"
+                                 "l1"
+                                 "r1";
+        }
+        #container>div:first-child {
+            grid-area: nav;
+            background-color: yellow;
+            font-size: 40px;
+            color: gray;
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Navigation</div>
+        <div>LEFT BOX</div>
+        <div>RIGHT BOX</div>
+    </div>
+</body>
+</html>

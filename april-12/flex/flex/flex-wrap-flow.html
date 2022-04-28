@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap and Flex Flow</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            border: 1px solid green;
+            padding: 3% 0px;
+            width: 1000px;
+            margin: auto;
+            /* It allows you to write both flex-wrap and flexdirection in the same line  */
+            flex-flow: row wrap;
+        }
+
+        .box {
+            width: 280px;
+            background-color: black;
+            color: white;
+            margin-top: 5px;
+            border: 1px solid red;
+            padding: 2% 0px;
+            text-align: center;
+            flex-shrink: 1;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Flex Wrap </h1>
+    <div class="container">
+        <div class="box"> Flex Shrink 1</div>
+        <div class="box">Flex Shrink 1</div>
+        <div class="box">Flex Shrink 1</div>
+        <div id="flex-shrink5" class="box">Flex Shrink 5</div>
+    </div>
+</body>
+
+</html>

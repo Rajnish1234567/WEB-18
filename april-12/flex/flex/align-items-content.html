@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items and Align Content</title>
+    <style>
+        /* general styling */
+
+        .align-items,
+        .align-content {
+            display: flex;
+            border: 3px solid #e02442;
+            padding: 1.5%;
+        }
+
+        body {
+            background: #546e7a;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .item {
+            padding: 2rem;
+            background: orange;
+            flex-basis: 10%;
+            margin: 5px;
+        }
+    </style>
+    <style>
+        .item {
+            height: 50px;
+        }
+
+        .item--large {
+            height: 200px;
+        }
+
+        .align-content {
+            flex-wrap: wrap;
+            /* align-items: center; */
+            align-content: stretch;
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Align-items and Align-content</h1>
+    <!-- <div class="container">
+        <h2>Align-items</h2>
+        <div class="align-items">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item--large"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div> -->
+    <div class="container">
+        <h2>Align-content</h2>
+        <div class="align-content">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item--large"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item--large">
+            </div>
+            <!-- <div class="item"></div>
+            <div class="item"></div> -->
+        </div>
+    </div>
+</body>
+
+</html>

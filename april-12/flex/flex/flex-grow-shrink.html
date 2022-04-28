@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            border: 1px solid green;
+            padding: 3% 0px;
+            width: 1000px;
+            margin: auto;
+        }
+
+        .box {
+            width: 280px;
+            flex-shrink: 1;
+            background-color: black;
+            color: white;
+            margin-top: 5px;
+            border: 1px solid red;
+            padding: 2% 0px;
+            text-align: center;
+        }
+
+        #flex-shrink5 {
+            flex-shrink: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <style>
+        .container2 {
+            display: flex;
+            border: 1px solid green;
+            padding: 3% 0px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .box1 {
+            width: 22%;
+            background-color: black;
+            color: white;
+            margin-top: 5px;
+            border: 1px solid red;
+            padding: 2% 0px;
+            text-align: center;
+            flex-grow: 3;
+        }
+
+        #flex-grow3 {
+            flex-grow: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Flex Shrink </h1>
+    <div class="container">
+        <div class="box"> Flex Shrink 1</div>
+        <div class="box">Flex Shrink 2</div>
+        <div class="box">Flex Shrink 3</div>
+        <div id="flex-shrink5" class="box">Flex Shrink 4</div>
+    </div>
+
+    <!-- <h1> Flex Grow </h1>
+    <div class="container2">
+        <div class="box1"> Flex Grow 1</div>
+        <div id="flex-grow3" class="box1">Flex Grow 1</div>
+        <div class="box1">Flex Grow 1</div>
+        <div class="box1">Flex Grow 3</div>
+    </div> -->
+</body>
+
+</html>

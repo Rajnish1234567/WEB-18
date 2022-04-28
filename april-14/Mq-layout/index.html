@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Mq-layout</title>
+    <style>
+        body>div:nth-child(1) {
+            width:80%;
+            margin:auto;
+            height:70px;
+            background-color: yellow;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        #container>div:nth-child(1) {
+            background-color: red;
+            grid-area: b1;
+            color:gray
+        }
+        #container>div:nth-child(2) {
+            background-color: green;
+            grid-area: b2;
+            color:gray;
+        }
+        #container>div:nth-child(3) {
+            background-color: blue;
+            grid-area: b3;
+            color:gray;
+        }
+        #container>div:nth-child(4) {
+            background-color: rgb(196, 193, 193);
+            grid-area: b4;
+            color:gray
+        }
+        #container {
+            width:80%;
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 200px;
+            grid-template-areas:"b1 b2 b3 b4";
+            gap:20px;
+        }
+        @media all and (min-width:550px) and (max-width:850px){
+            #container {
+            width:90%;
+            margin:auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 200px 200px;
+            grid-template-areas:"b1 b3" 
+                                "b2 b4";
+            }
+            body>div:nth-child(1) {
+                width:90%;
+            }
+        }
+        @media all and (min-width:200px) and (max-width:550px){
+            #container {
+
+            width:95%;
+            margin:auto;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4,130px);
+            grid-template-areas:"b1" 
+                                "b4"
+                                "b2"
+                                "b3";
+            }
+            body>div:nth-child(1) {
+                width:95%;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+        <div>Navigation</div>
+        <div id="container">
+            <div>Box 1</div>
+            <div>Box 2</div>
+            <div>Box 3</div>
+            <div>Box 4</div>
+        </div>
+</body>
+</html>

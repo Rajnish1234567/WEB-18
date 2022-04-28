@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <title>Document</title>
+  <style>
+    
+    #header {
+      text-align: center;
+      font-size: 15px;
+    }
+    #blogs-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+    #blogs-container>div {
+      text-align: center;
+    }
+    p {
+      color: gray;
+      margin-top: 3px;
+      margin-bottom: 0%;
+    }
+    #blogs-container>div>h5 {
+      margin-top:3px ;
+      font-size: 16px;
+    }
+    #catagory-container {
+      width: 70%;
+      margin:auto;
+      background-color: rgb(150, 204, 186);
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows:repeat(2, auto) ;
+      padding:25px;
+      gap:20px;
+      margin-bottom: 15px;
+    }
+    #catagory-container>div {
+      margin: auto;
+      padding:15px 10px 15px 10px;
+      background-color:white;
+    }
+    h4 {
+      margin-bottom: 0%;
+    }
+    /* Medium screens */
+    @media all and (min-width:451px) and (max-width:750px) {
+      #blogs-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 30px;
+      }
+      #catagory-container {
+      width: 70%;
+      margin:auto;
+      background-color: rgb(150, 204, 186);
+      height:auto;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows:repeat(3, auto) ;
+  
+      margin-bottom: 15px;
+      margin:auto;
+      
+    }
+    }
+
+
+    /* Small Screens */
+    @media all and (min-width:100px) and (max-width:450px) {
+      #blogs-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2,auto);
+      width:70%;
+      margin:auto;
+      gap: 30px;
+      }
+      #catagory-container {
+      width: 70%;
+      background-color: rgb(150, 204, 186);
+      height:auto;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows:repeat(4, auto) ;
+  
+      margin-bottom: 15px;
+      margin:auto;
+      
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Our Blog Posts</h1>
+  </div>
+  <div id="blogs-container">
+    <!-- All the Blogs will be here  -->
+    <div>
+      <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Mohit_Tandon_Delhivery_b43fee16c4.jpg" alt="">
+      <p>29 January 2019</p>
+      <h5>Architectural Art Modern</h5>
+      <!-- the images, date and the blog heading will be here  -->
+    </div>
+    <div>
+      <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Akhil_Gupta_Nobroker_539cd97f6c.jpg" alt="">
+      <p>29 January 2019</p>
+      <h5>Architectural Art Modern</h5>
+      <!-- the images, date and the blog heading will be here  -->
+    </div>
+    <div>
+      <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/farid_ahsan_sharechat_1251f28141.png" alt="">
+      <p>29 January 2019</p>
+      <h5>Architectural Art Modern</h5>
+    <!-- the images, date and the blog heading will be here  -->
+    </div>
+  </div>
+  <div id="catagory-container">
+    <!-- All the boxes for blog catagory goes here  -->
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+    <div>
+      <h4>Creative Design</h4>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+      <!-- The image, h3 tag, p tag etc will be here  -->
+    </div>
+  </div>
+</body>
+
+</html>

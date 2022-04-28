@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        #container {
+            background-color: rgb(15, 15, 49);
+            color:white;
+            display: flex;
+            justify-content: space-between;
+            padding:30px;
+            border-radius: 15px;
+
+        }
+        #command {
+            display:flex;
+            gap:40px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Reebok</div>
+        <div id="command">
+            <div id="men">Men</div>
+            <div id="women">Women</div>
+            <div id="login">Login</div>
+            <div id="signup">Signup</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#men").addEventListener("click",menFun)
+    document.querySelector("#women").addEventListener("click",womenFun)
+    document.querySelector("#login").addEventListener("click",login)
+    document.querySelector("#signup").addEventListener("click",signup)
+    function signup(){
+        window.location.href="signup.html";
+    }
+    function login (){
+        window.location.href="login.html";
+    }
+    function menFun(){
+        window.location.href="mens.html";
+    }
+    function womenFun(){
+        window.location.href="womens.html";
+    }
+</script>

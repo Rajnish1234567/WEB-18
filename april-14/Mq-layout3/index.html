@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>MQ-Layout-3</title>
+    <style>
+        #container {
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 50px 100px 100px 100px;
+            grid-template-areas: "nav nav nav"
+                                  "l1 l1 r1"
+                                  "l1 l1 r2"
+                                  "l1 l1 r3";
+            gap:20px
+        }
+        #container>div:nth-child(1) {
+            background-color: yellow;
+            font-size: 30px;
+            grid-area: nav;
+        }
+        #container>div:nth-child(2) {
+            background-color: red;
+            font-size: 20px;
+            grid-area: l1;
+        }
+        #container>div:nth-child(3) {
+            background-color: rgb(78, 211, 78);
+            font-size: 20px;
+            grid-area: r1;
+        }
+        #container>div:nth-child(4) {
+            background-color: rgb(78, 211, 78);
+            font-size: 20px;
+            grid-area: r2;
+        }
+        #container>div:nth-child(5) {
+            background-color: rgb(78, 211, 78);
+            font-size: 20px;
+            grid-area: r3;
+        }
+        @media all and (min-width:451px) and (max-width:750px) {
+            #container {
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 50px 100px 100px 100px;
+            grid-template-areas: "nav nav nav"
+                                  "l1 l1 l1"
+                                  "l1 l1 l1"
+                                  "r1 r2 r3";
+            gap:15px
+            }
+        }
+        @media all and (min-width:100px) and (max-width:450px) {
+            #container {
+            width:90%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 50px 200px 100px 100px 100px;
+            grid-template-areas: "nav"
+                                  "l1"
+                                  "r1"
+                                  "r2"
+                                  "r3";
+            gap:10px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Navigation</div>
+        <div>LEFT BOX</div>
+        <div>RIGHT BOX 1</div>
+        <div>RIGHT BOX 2</div>
+        <div>RIGHT BOX 3</div>
+    </div>
+</body>
+</html>

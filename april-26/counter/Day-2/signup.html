@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and login</title>
+    <style>
+        #logo{
+            margin:auto;
+            margin-top:50px ;
+            display: flex;
+            align-content: center;
+        }
+        #container {
+            width:400px;
+            margin:auto;
+            box-shadow: 1px 1px 10px 5px;
+            padding: 30px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input {
+            width:90%;
+            margin:auto;
+            height:30px;
+            border:2px solid rgb(184, 182, 182);
+        }
+        button {
+            width:90%;
+            margin:auto;
+            padding:10px;
+            margin-top: 30px;
+        }
+    </style>
+   
+</head>
+<body>
+    <img id="logo" src="https://sso.masaischool.com/brand_dark.svg" alt="masai">
+    <div id="container">
+        <h2>Sign Up</h2>
+        <p >Full name</p>
+        <input id="name" type="text" placeholder="Enter your full name">
+        <p >Email</p>
+        <input id="email" type="text" placeholder="Enter email">
+        <p >Mobile Number</p>
+        <input id="mobile" type="number" placeholder="Enter mobile no">
+        <p >Password</p>
+        <input  id="password" type="text" placeholder="Enter password">
+        <br>
+        <button>SIGN UP</button>
+       <!-- <p> <a href="http://127.0.0.1:5500/Day-2/login.html"></a></p> -->
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",myFun)
+    var data=[];
+    function myFun() {
+        var dataObj={
+            name:document.querySelector("#name").value,
+            email:document.querySelector("#email").value,
+            mobile:document.querySelector("#mobile").value,
+            password:document.querySelector("#password").value
+        }
+        
+        if(document.querySelector("#name").value=="" || document.querySelector("#email").value=="" ||document.querySelector("#mobile").value=="" || document.querySelector("#password").value=="")
+        {
+            alert("Please enter all the credential")
+        }
+        else{
+            data.push(dataObj);
+            localStorage.setItem("data",JSON.stringify(data));
+            alert("SignUp successfully")
+        }
+    }
+</script>

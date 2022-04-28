@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var buttonObj= 
+    [
+        {name: "Primary", color: "white", bgcolor: "blue"},
+        {name: "Secondary", color: "white", bgcolor: "gray"},
+        {name: "Success", color: "white", bgcolor: "green"},
+        {name: "Danger", color: "white", bgcolor: "red"},
+        {name: "Warning", color: "black", bgcolor: "yellow"},
+        {name: "Info", color: "white", bgcolor: "blue"},
+        {name: "Light", color: "black", bgcolor: "white"},
+        {name: "Dark", color: "white", bgcolor: "black"},
+        {name: "Link", color: "blue", bgcolor: "white"}
+    ];
+    buttonObj.forEach( function(elem)
+    {
+        var button=document.createElement("button");
+        button.innerText=elem.name;
+        button.style.color=elem.color;
+        button.style.backgroundColor=elem.bgcolor;
+        document.querySelector("body").append(button)
+    })
+</script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U2C3 Mock</title>
+    <style>
+      #report {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(7,auto) ;
+        gap:15px;
+        margin: 20px;
+      }
+      #report>div {
+        padding:0px 0px 15px 15px;
+        box-shadow:.5px .5px 12px 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <form >
+      <select id="month">
+        <option value="January">JANUARY</option>
+        <option value="February">FEB</option>
+        <option value="MARCH">MARCH</option>
+        <option value="APRIL">APRIL</option>
+        <option value="MAY">MAY</option>
+        <option value="JUNE">JUNE</option>
+        <option value="JULY">JULY</option>
+        <option value="AUGUST">AUGUST</option>
+        <option value="SEPETEMBER">SEPETEMBER</option>
+        <option value="OCTOBER">OCTOBER</option>
+        <option value="NOVEMBER">NOVEMBER</option>
+        <option value="DECEMBER">DECEMBER</option>
+      </select>
+
+      <input id="income" type="number" placeholder="Enter Income" />
+
+      <input id="expense" type="number" placeholder="Enter expense" />
+
+      <input type="submit" />
+    </form>
+
+    <div id="report">
+          <!-- Append your cards here -->
+    </div>
+  </body>
+</html>
+
+<script>
+ var form=document.querySelector("form");
+ var container=document.querySelector("#report");
+
+ form.addEventListener("submit",myfunction)
+function myfunction(){
+  event.preventDefault()
+  var data={
+    month:form.month.value,
+    income:form.income.value,
+    exp:form.expense.value
+  }
+  display(data);
+}
+function display(data){
+  var box=document.createElement("div");
+  var month=document.createElement("h1");
+  month.innerText=data.month;
+  var income=document.createElement("p");
+  income.innerText=data.income;
+  var exp=document.createElement("p");
+  exp.innerText=data.exp;
+  var result=document.createElement("p")
+  var out=data.income-data.exp;
+  if(out<0){
+    result.innerText="Debt";
+    result.style.color="red";
+  }
+  else if(out===0){
+    result.innerText="BreakEven";
+    result.style.color="yellow";
+  }
+  else{
+    result.innerText="save";
+    result.style.color="green";
+  }
+  var btn=document.createElement("button");
+  btn.innerText="Delete";
+  btn.addEventListener("click",deleteRow)
+  box.append(month,income,exp,result,btn);
+  container.append(box);
+}
+function deleteRow() {
+  event.target.parentNode.remove();
+}
+</script>

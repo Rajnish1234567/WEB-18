@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        #container {
+            width:90%;
+            margin:auto;
+            padding-top: 10px;
+            padding-bottom:10px;
+            display:grid;
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+        }
+        #container>div {
+            padding: 15px 20px 15px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #container>div:first-child {
+            background-color: rgb(78, 78, 238);
+            color:white;
+        }
+        #container>div:last-child {
+            background-color: white;
+            color:rgb(78, 78, 238);
+        }
+        #container>div:nth-child(2) {
+            background-color: gray;
+            color:white;
+        }
+        #container>div:nth-child(3) {
+            background-color: rgb(31, 150, 76);
+            color:white;
+        }
+        #container>div:nth-child(4) {
+            background-color: rgb(214, 18, 18);
+            color:white;
+        }
+        #container>div:nth-child(5) {
+            background-color: rgb(212, 152, 20);
+            color:black;
+        }
+        #container>div:nth-child(6) {
+            background-color: rgb(63, 129, 160);
+            color:white;
+        }
+        #container>div:nth-child(7) {
+            background-color: white;
+            color:black;
+        }
+        #container>div:nth-child(8) {
+            background-color: rgb(43, 40, 40);
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Primary</div>
+        <div>Secondary</div>
+        <div>Success</div>
+        <div>Danger</div>
+        <div>Warning</div>
+        <div>Info</div>
+        <div>Light</div>
+        <div>Dark</div>
+        <div>Link</div>
+    </div>
+</body>
+</html>

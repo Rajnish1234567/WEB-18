@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin-top: 30px;
+
+            color:rgb(12, 57, 87);
+            background-color: gray;
+            padding:10px;
+            border:0px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        #container{
+            display: flex;
+            gap:20px;
+            flex-wrap: wrap;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .logo{
+            width:30%;
+            margin-left:30%;
+            display:flex;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button>Back</button>
+</body>
+</html>
+<script>
+document.querySelector("button").addEventListener("click",backFun)
+
+function backFun(){
+    window.location.href="navbar.html";
+}
+
+var data=JSON.parse(localStorage.getItem("Data"));
+data.forEach(function(elem){
+    displayData(elem);
+    console.log(elem)
+})
+
+function displayData(elem)
+{
+    var box=document.createElement("div")
+    var avtar=document.createElement("img")
+    avtar.src=elem.investorImg;
+    var name=document.createElement("h2")
+    name.innerText=elem.investorName;
+    var role=document.createElement("p")
+    role.innerText=elem.investorRole;
+    var logo=document.createElement("img")
+    logo.className="logo"
+    logo.src=elem.investorCompany;
+    box.append(avtar,name,role,logo)
+    document.querySelector("#container").append(box)
+}
+
+</script>

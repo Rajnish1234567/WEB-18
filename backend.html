@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+    <style>
+        button {
+            margin-top: 30px;
+
+            color:rgb(12, 57, 87);
+            background-color: rgb(161, 72, 72);
+            padding:10px;
+            border:0px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        #submit {
+            margin-top: 30px;
+            color:rgb(12, 57, 87);
+            background-color: gray;
+            padding:10px;
+            border:0px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        div {
+            width:60%;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form id="form">
+            <h2>Name <input id="name" type="text" placeholder="Enter your name"></h2>
+            <h2>Image <input id="image" type="text" placeholder=" put your image URL"></h2>
+            <h2>Company <input id="company" type="text" placeholder="enter company logo"></h2>
+            <h2>Role <input id="role" type="text" placeholder="Enter your position"></h2>
+            <input id="submit" type="submit">
+        </form>
+        <button>Back</button>
+    </div>
+</body>
+</html>
+<script>
+var back=document.querySelector("button");
+var form=document.querySelector("#form");
+
+back.addEventListener("click",backFun)
+function backFun(){
+    window.location.href="navbar.html";
+}
+
+var dataArr=JSON.parse(localStorage.getItem("Data")) || [];
+form.addEventListener("submit",submitFun);
+
+function submitFun()
+{
+    event.preventDefault();
+    if (form.name.value=="" || form.image.value=="" || form.company.value=="" || form.role.value=="") 
+    {
+        alert("Enter all value")
+    }
+    else{
+        var dataObj={
+            investorImg:form.image.value,
+            investorName:form.name.value,
+            investorCompany:form.company.value,
+            investorRole:form.role.value
+        }
+        dataArr.push(dataObj);
+        localStorage.setItem("Data",JSON.stringify(dataArr));
+        form.image.value=""
+        form.name.value=""
+        form.company.value=""
+        form.role.value=""
+    }
+    }
+</script>
